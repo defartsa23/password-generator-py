@@ -1,15 +1,15 @@
-from distutils.core import setup
+from setuptools import setup
 # read the contents of your README file
 from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(
-  name = 'password_generator',         # How you named your package folder (MyLib)
-  packages = ['password_generator'],   # Chose the same as "name"
+  name = 'rand_pass_generator',         # How you named your package folder (MyLib)
+  packages = ['rand_pass_generator'],   # Chose the same as "name"
   version = '1.0.0',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'This module offers random password generation.',   # Give a short description about your library
+  description = 'This module offers random password generator',   # Give a short description about your library
   long_description=long_description,            # Give a long description about your library
   long_description_content_type='text/markdown',
   author = 'Deza Farras Tsany',                   # Type in your name

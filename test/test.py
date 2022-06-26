@@ -1,4 +1,4 @@
-from password_generator import generate
+from rand_pass_generator import generate
 
 def testFunction():
     assert type(generate()) == str
