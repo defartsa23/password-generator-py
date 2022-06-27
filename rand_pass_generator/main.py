@@ -5,6 +5,7 @@ __version__ = '1.0.0'
 This module offers random password generation.
 """
 
+from safe  import check
 from random import choice, randint, shuffle
 from string import digits, punctuation, ascii_letters
 
@@ -27,6 +28,14 @@ def _randomWord():
     length = randint(_min_word_length, _max_word_length)
     return ''.join(choice(ascii_letters) for i in range(length))
 
+def check_password(password):
+    checkPassword = check(password)
+    return {
+        'level': checkPassword.level,
+        'strength': checkPassword.strength,
+        'message': checkPassword.message
+    }
+
 def generate():
     """
     This function aims to generate passwords randomly
@@ -34,4 +43,11 @@ def generate():
     str_pass = _randomDigits() + _randomPunctuation() + _randomWord()
     str_pass = list(str_pass)
     shuffle(str_pass)
-    return ''.join( str_pass )
+    str_pass = ''.join( str_pass )
+    checkPassword = check_password(str_pass)
+    
+    return {
+        'password': str_pass,
+        'level': checkPassword['level'],
+        'strength': checkPassword['strength']
+    }

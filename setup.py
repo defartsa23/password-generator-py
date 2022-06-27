@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 setup(
   name = 'rand_pass_generator',         # How you named your package folder (MyLib)
   packages = ['rand_pass_generator'],   # Chose the same as "name"
-  version = '1.0.0',      # Start with a small number and increase it with every change you make
+  version = '1.0.20',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'This module offers random password generator',   # Give a short description about your library
   long_description=long_description,            # Give a long description about your library
@@ -23,6 +23,9 @@ setup(
   }, 
   keywords = ['PASSWORD', 'GENERATOR', 'RANDOM'],   # Keywords that define your package best
   install_requires=[],
+  dependency_links=[
+    'https://github.com/defartsa23/safe/archive/refs/heads/master.zip#egg=Safe'
+  ],
   classifiers=[
     'Development Status :: 5 - Production/Stable',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Developers',      # Define that your audience are developers
