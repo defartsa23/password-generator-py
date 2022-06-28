@@ -1,1 +1,2 @@
-from .main import generate, check_password
+from .generate import generate
+from .check import check
