@@ -1,2 +1,2 @@
 from .generate import generate
-from .check import check
+from .safe.safe import check

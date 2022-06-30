@@ -7,7 +7,7 @@ This module offers random password generation.
 
 from random import choice, randint, shuffle
 from string import digits, punctuation, ascii_letters
-from .check import check
+from .safe.safe import check
 
 _min_length = 5
 _max_length = 8
