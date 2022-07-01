@@ -20,19 +20,27 @@ from rand_pass_generator import generate, check
 
 # to generate numeric password
 password = generate().number()
+# Output : {'password': '003462', 'level': 0, 'strength': 'terrible', 'message': 'password is too short'}
 
 # to generate letter password
 password = generate().letter()
+# Output : {'password': 'kapebq', 'level': 0, 'strength': 'terrible', 'message': 'password is too short'}
 
 # to generate numberic and letter password
 password = generate().numberLetter()
+# Output : {'password': 'q9hlWS11', 'level': 3, 'strength': 'strong', 'message': 'password is perfect'}
 
 # to generate random password
 password = generate().random()
+# Output : {'password': 'm6P)^yz9b"966D9G4uTd.!8Ni7xU1o19', 'level': 4, 'strength': 'very strong', 'message': 'password is very perfect'}
 
 # to check the strength of your password
 check = check("Password")
+# Output : {'valid': False, 'level': 2, 'strength': 'medium', 'message': 'password is good enough, but not strong'}
 ```
+
+## Dev Dependencies
+* [Safe](https://github.com/defartsa23/safe) from [lepture](https://github.com/lepture)
 
 ## Contributing
 
