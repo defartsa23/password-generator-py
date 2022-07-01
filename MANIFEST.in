@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include rand_pass_generator/safe/safe/words.dat
+include rand_pass_generator/safe/LICENSE
+include rand_pass_generator/safe/README.rst
