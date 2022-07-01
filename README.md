@@ -16,9 +16,22 @@ pip install rand-pass-generator
 First of all, initialize:
 
 ```python
-from rand_pass_generator import generate
+from rand_pass_generator import generate, check
 
-password = generate()
+# to generate numeric password
+password = generate().number()
+
+# to generate letter password
+password = generate().letter()
+
+# to generate numberic and letter password
+password = generate().numberLetter()
+
+# to generate random password
+password = generate().random()
+
+# to check the strength of your password
+check = check("Password")
 ```
 
 ## Contributing
